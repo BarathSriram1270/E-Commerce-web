@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ecom-proj
+    runtime: docker
+    repo: https://github.com/BarathSriram1270/E-Commerce-web.web
+    branch: main
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+    disk:
+      name: h2-data
+      mountPath: /data
+      sizeGB: 1
